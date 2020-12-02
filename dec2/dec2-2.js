@@ -4,7 +4,7 @@ const input = fs.readFileSync('./input.txt', 'utf-8');
 const values = input.split('\n');
 let validCount = 0;
 
-for(let value of values){
+for(const value of values){
   const line = value.split(' ');
 
   const numbers = line[0].split('-');
