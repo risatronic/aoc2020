@@ -2,7 +2,6 @@ const fs = require("fs");
 const input = fs.readFileSync("./input.txt", "utf-8");
 
 const lines = input.split("\n");
-const rowLength = lines[0].length;
 
 function treeProduct(slopes) {
   let treeProduct = 1;
@@ -16,13 +15,14 @@ function treeProduct(slopes) {
 
     for (i = 0; i < lines.length; i++) {
       if (index >= lines[i].length) {
-        index = index % rowLength;
+        index = index % lines[i].length;
       }
       if (lines[i][index] === "#") {
         treeCount++;
       }
 
       index += right;
+      
       if(down > 1){
         i += (down - 1)
       }
