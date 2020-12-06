@@ -5,7 +5,7 @@ const values = input.split("\n");
 const seatIDs = [];
 
 function getNum(which, input) {
-  let range, char1, char2;
+  let range, char1, char2, num;
 
   if (which == "row") {
     range = [0, 127];
