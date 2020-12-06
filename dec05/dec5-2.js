@@ -7,11 +7,11 @@ const seatIDs = [];
 function getNum(which, input) {
   let range, char1, char2, num;
 
-  if (which == "row") {
+  if (which === "row") {
     range = [0, 127];
     char1 = "F";
     char2 = "B";
-  } else if (which == "seat") {
+  } else if (which === "seat") {
     range = [0, 7];
     char1 = "L";
     char2 = "R";
